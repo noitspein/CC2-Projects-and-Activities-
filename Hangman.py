@@ -14,22 +14,27 @@ if category == 0:
     
     import secrets
     
-    words = ["Python", "Java", "Javascript"]
+    words = ["python", "developer", "programming", "algorithm", "hardware", "software", "robotics", "compiler", "processor"]
     
     random_word = secrets.choice(words)
   
     guess = input("Your guess: ")
     
-    if guess == random_word:
-        print("Congratulations!")
-        
-    else:
-        print("Game Over!")
     
     
     
     
-   
+
+
+
+
+
+
+
+
+
+
+
 elif category == 1:
     print("You have selected, Mathematics")
     print("Try to guess the word. You have 6 incorrect guesses.")
@@ -47,5 +52,4 @@ elif category == 4:
     print("Try to guess the word. You have 6 incorrect guesses.")
     
 else:
-    print("Category is out of range")
-    
+    print("Category is out of range"]
