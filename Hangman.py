@@ -18,7 +18,7 @@ if category == 0:
     
     random_word = secrets.choice(words)
   
-    guess = input("Your guess: ")
+    guess = input("Guess a letter: ")
     
     
     
@@ -53,6 +53,3 @@ elif category == 4:
     
 else:
     print("Category is out of range"]
-
-
-test-limar
