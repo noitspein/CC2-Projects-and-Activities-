@@ -112,11 +112,11 @@ if category not in word_lists:
 
         if len(guess) = 1 or not guess.isalpha():
             print("Please enter a single valid letter.")
-            continue
+           
 
         if guess in guessed_letters:
             print("You already guessed that letter.")
-            continue
+            
 
         guessed_letters.append(guess)
 
