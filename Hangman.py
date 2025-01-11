@@ -91,9 +91,9 @@ else:
         4: ["revolution", "empire", "dynasty", "medieval", "warfare", "treaty", "civilization", "monarch"]
     }
 
-    if category not in word_lists:
+if category not in word_lists:
         print("Category is out of range.")
-        return
+        
 
     print(f"You have selected category {category}. Try to guess the word. You have 6 incorrect guesses.")
 
