@@ -1,3 +1,5 @@
+import secrets
+
 print("Welcome to Hangman!")
 print("Categories:")
 print("0 - Technology")
@@ -12,23 +14,35 @@ if category == 0:
     print("You have selected, Technology")
     print("Try to guess the word. You have 6 incorrect guesses.")
     
-    import secrets
+    words = ["python", "developer", "programming", "algorithm", "hardware", 
+             "software", "robotics", "compiler", "processor"]
+             
+    word = secrets.choice(words)  
+    guessed_word = ["_"] * len(word) 
+    attempts = 6
+    guessed_letters = set()
     
-    words = ["python", "developer", "programming", "algorithm", "hardware", "software", "robotics", "compiler", "processor"]
+    while attempts > 0 and "_" in guessed_word:
+        print("\nWord to guess:", " ".join(guessed_word))
+        guess = input("Guess a letter: ").lower()
+        
+        if guess in guessed_letters:
+            print("You already guessed that letter. Try again.")
+        elif guess in word:
+            guessed_letters.add(guess)
+            print(f"Correct! '{guess}' is in the word.")
+            for i, letter in enumerate(word):
+                if letter == guess:
+                    guessed_word[i] = guess
+        else:
+            guessed_letters.add(guess)
+            attempts -= 1
+            print(f"Incorrect! '{guess}' is not in the word. Attempts left: {attempts}")
     
-    random_word = secrets.choice(words)
-  
-    guess = input("Guess a letter: ")
-    
-    
-    
-    
-    
-
-
-
-
-
+    if "_" not in guessed_word:
+        print("\nCongratulations! You guessed the word:", word)
+    else:
+        print("\nGame over! The word was:", word)
 
 
 
@@ -52,5 +66,4 @@ elif category == 4:
     print("Try to guess the word. You have 6 incorrect guesses.")
     
 else:
-    print("Category is out of range"]
-
+    print("Category is out of range")
