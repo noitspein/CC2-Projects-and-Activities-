@@ -52,8 +52,12 @@ if category == 0:
 elif category == 1:
     print("You have selected, Mathematics")
     print("Try to guess the word. You have 6 incorrect guesses.")
-    
-if category == 2:
+   
+
+ 
+
+
+elif category == 2:
     print("You have selected, science")
     print("Try to guess the word. You have 6 incorrect guesses.")
 
@@ -87,6 +91,10 @@ if category == 2:
     else:
         print("\nGame over! The word was:", word)
     
+
+
+
+
 elif category == 3:
     print("You have selected, English")
     print("Try to guess the word. You have 6 incorrect guesses.")
