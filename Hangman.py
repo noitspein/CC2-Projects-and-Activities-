@@ -52,7 +52,6 @@ if category == 0:
 elif category == 1:
     print("You have selected, Mathematics")
     print("Try to guess the word. You have 6 incorrect guesses.")
-
   
    words = ["calculus", "theorem", "equation", "algebra", "probability", "geometry"]
 
