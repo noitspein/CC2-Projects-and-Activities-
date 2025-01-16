@@ -46,14 +46,11 @@ if category == 0:
 
 
 
-
-
-
 elif category == 1:
     print("You have selected, Mathematics")
     print("Try to guess the word. You have 6 incorrect guesses.")
   
-   words = ["calculus", "theorem", "equation", "algebra", "probability", "geometry"]
+    words = ["calculus", "theorem", "equation", "algebra", "probability", "geometry"]
 
     word = secrets.choice(words)  
     guessed_word = ["_"] * len(word) 
@@ -80,7 +77,7 @@ elif category == 1:
     if "_" not in guessed_word:
         print("\nCongratulations! You guessed the word:", word)
     else:
-        print("\nGame over! The word was:", word
+        print("\nGame over! The word was:", word)
 
  
 
@@ -88,7 +85,7 @@ elif category == 1:
 
 
 elif category == 2:
-    print("You have selected, science")
+    print("You have selected, Science")
     print("Try to guess the word. You have 6 incorrect guesses.")
 
     words = ["molecule", "gravity", "chemistry", "genetics", "photosynthesis", 
@@ -133,9 +130,9 @@ elif category == 4:
     print("You have selected, History")
     print("Try to guess the word. You have 6 incorrect guesses.")
 
-words = ["civilization", "colonization", "revolution", "archaeology", "imperialism"]
+    words = ["civilization", "colonization", "revolution", "archaeology", "imperialism"]
 
-  word = secrets.choice(words)  
+    word = secrets.choice(words)  
     guessed_word = ["_"] * len(word) 
     attempts = 6
     guessed_letters = set()
