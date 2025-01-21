@@ -51,3 +51,16 @@ if category in category_words:
         print("\nGame over! The word was:", word)
 else:
     print("Invalid category. Please restart the game.")
+    
+def main():
+    while True:
+        play_game() 
+        
+        play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+        
+        if play_again != "no":
+            print("Thanks for playing! Goodbye!")
+            break
+
+if __name__ == "__main__":
+    main()
