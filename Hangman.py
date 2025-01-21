@@ -19,13 +19,13 @@ category_words = {
 }
 
 if category in category_words:
+    print(f"You have selected category {category}. Try to guess the word. You have 6 incorrect guesses.")
+    
     words = category_words[category]
     word = secrets.choice(words)
     guessed_word = ["_"] * len(word)
     attempts = 6
     guessed_letters = set()
-
-    print(f"You have selected category {category}. Try to guess the word. You have 6 incorrect guesses.")
 
     while attempts > 0 and "_" in guessed_word:
         print("\nWord to guess:", " ".join(guessed_word))
