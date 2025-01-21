@@ -10,6 +10,7 @@ print("4 - History")
 
 category = int(input("Select a category: "))
 
+category_names = ["Technology", "Mathematics", "Science", "English", "History"]
 category_words = {
     0: ["python", "developer", "programming", "algorithm", "hardware", "software", "robotics", "compiler", "processor"],
     1: ["calculus", "theorem", "equation", "algebra", "probability", "geometry"],
@@ -19,8 +20,8 @@ category_words = {
 }
 
 if category in category_words:
-    print(f"You have selected category {category}. Try to guess the word. You have 6 incorrect guesses.")
-    
+    print(f"You have selected, {category_names[category]}. Try to guess the word. You have 6 incorrect guesses.")
+
     words = category_words[category]
     word = secrets.choice(words)
     guessed_word = ["_"] * len(word)
