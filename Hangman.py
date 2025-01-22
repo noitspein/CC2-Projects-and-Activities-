@@ -1,13 +1,15 @@
 import secrets
 
 def play_game():
-    print("Welcome to Hangman!")
-    print("Categories:")
-    print("0 - Technology")
-    print("1 - Mathematics")
-    print("2 - Science")
-    print("3 - English")
-    print("4 - History")
+    print(
+    "Welcome to Hangman!\n"
+    "Categories:\n"
+    "0 - Technology\n"
+    "1 - Mathematics\n"
+    "2 - Science\n"
+    "3 - English\n"
+    "4 - History"
+)
 
     category_names = ["Technology", "Mathematics", "Science", "English", "History"]
     category_words = {
@@ -19,7 +21,7 @@ def play_game():
     }
 
     try:
-        category = int(input("Select a category:"))
+        category = int(input("Select a category: "))
         if category not in category_words:
             raise ValueError
 
@@ -37,6 +39,7 @@ def play_game():
 
             if guess in guessed_letters:
                 print("You already guessed that letter. Try again.")
+                print("Guessed letters so far:", ", ".join(sorted(guessed_letters)))
             elif guess in word:
                 guessed_letters.add(guess)
                 print(f"Correct! '{guess}' is in the word.")
