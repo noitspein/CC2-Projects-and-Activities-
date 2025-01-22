@@ -55,7 +55,8 @@ if category in category_words:
 else:
     print("Invalid category. Please restart the game.")
     
-def play_game():
+def main():
+    def play_game():
     while True:
         play_game() 
         
